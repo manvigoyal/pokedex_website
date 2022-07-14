@@ -15,6 +15,7 @@ const App = () => {
     e.preventDefault();
     getPokemon();
   };
+  const pokemonurl = "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/25.svg";
   const getPokemon = async () => {
     const toArray = [];
     try {
@@ -23,6 +24,9 @@ const App = () => {
       toArray.push(res.data);
       setPokemonType(res.data.types[0].type.name);
       setPokemonData(toArray);
+      const pokemonid = res.data.id;
+      pokemonurl = "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/pokemonid.svg";
+      // console.log(res.data.id);
     } catch (e) {
       console.log(e);
     }
@@ -45,7 +49,7 @@ const App = () => {
       {pokemonData.map((data) => {
         return (
           <div className="container">
-            <img src={data.sprites["front_default"]}/>
+            <img src={pokemonurl}/>
             <div className="divTable">
               <div className="divTableBody">
                 <div className="divTableRow">
