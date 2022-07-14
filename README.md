@@ -1,3 +1,6 @@
+# Here is the link of deployed site
+https://resplendent-maamoul-29377a.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
